@@ -81,6 +81,8 @@ alias gf='git fetch'
 alias dot='cd ~/dotfiles'
 alias zshrc='vim ~/dotfiles/.zshrc'
 
+alias sshconfig='vim ~/.ssh/config'
+
 alias d='docker'
 alias dco='docker compose'
 alias dcoe='docker compose exce'
