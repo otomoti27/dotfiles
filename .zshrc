@@ -85,7 +85,8 @@ alias sshconfig='vim ~/.ssh/config'
 
 alias d='docker'
 alias dco='docker compose'
-alias dcoe='docker compose exce'
+alias dcoe='docker compose exec'
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$PATH:$HOME/Library/Python/3.8/bin"
