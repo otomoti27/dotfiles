@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # 環境変数
 export LANG=ja_JP.UTF-8
 
@@ -87,6 +89,22 @@ alias d='docker'
 alias dco='docker compose'
 alias dcoe='docker compose exec'
 
+alias oapp='osascript ~/dotfiles/scpt/open_work_app.scpt'
+alias capp='osascript ~/dotfiles/scpt/close_work_app.scpt'
+
+# laravel sail
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+# atcoder
+alias ojt='oj t -c " go main.go" -d test'
+
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH="$PATH:$HOME/Library/Python/3.8/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+#pyenvの初期化
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
